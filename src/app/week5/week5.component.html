@@ -1,0 +1,27 @@
+<div class="container">
+  <!-- Form -->
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <label class="form-label">Judul</label>
+      <input type="text" class="form-control" [(ngModel)]="judul">
+      <label class="form-label">Pengarang</label>
+      <input type="text" class="form-control" [(ngModel)]="pengarang">
+      <label class="form-label">Penerbit</label>
+      <input type="text" class="form-control" [(ngModel)]="penerbit">
+      <br>
+      <button class="btn btn-block btn-primary" (click)="tambahBuku()">Tambah</button>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <!-- Display Data-->
+  <div class="row" *ngFor="let buku of daftarBuku">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h2>{{ buku.judul }}</h2>
+      <h4>{{ buku.pengarang }}</h4>
+      <p>{{ buku.penerbit }}</p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
